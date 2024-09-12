@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% include 'parts/navbar.html' %}
+
+<style>
+    .cont {
+        margin-top: 145px;
+    }
+</style>
+<div class="cont">
+
+    {% block content %}
+    {% endblock content %}
+    
+</div>
+{% include 'parts/footer.html' %}
