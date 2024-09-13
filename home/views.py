@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,'index.html')
+
+def ecommerce(request):
+    return render(request,'ecommerce.html')
