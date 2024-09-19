@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    <!-- ======================= Css ========================= -->
+    <!-- remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- main style -->
+     <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- =================== Header Profile ========== -->
+     <header>
+        <div class="container profile grid">
+            <!-- ====== Theme Button ===== -->
+             <i id="theme-btn" class="ri-moon-line"></i>
+            <div class="profile-data">
+                <div class="imgBx">
+                    <img src="assets/images/ben.jpg" alt="">
+                </div>
+                <h2 class="name">Rebai Benatallah</h2>
+                <h3 class="profession">Backend Developer</h3>
+                <div class="socials">
+                    <a href="https://www.instagram.com/re_benatallah/" target="_blank" class="link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/re_benatallah/" target="_blank" class="link">
+                        <i class="ri-github-line"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/re_benatallah/" target="_blank" class="link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-info grid">
+                <div class="group">
+                    <h3 class="number">7</h3>
+                    <p class="desc">Years of <br> work</p>
+                </div>
+
+                <div class="group">
+                    <h3 class="number">+124</h3>
+                    <p class="desc">Completed <br> projects</p>
+                </div>
+
+                <div class="group">
+                    <h3 class="number">96</h3>
+                    <p class="desc">Satisfied <br> customers</p>
+                </div>
+            </div>
+            <div class="profile-btns">
+                <!--  ------------ CV Download Btn --------- -->
+                  <a href="" class="btn" download="">
+                    Download CV <i class="ri-download-line"></i>
+                  </a>
+                <!-- Insert a real number  plus country code -->
+                 <div class="small-btns">
+                    <a href="https://api.whatsapp.com/send?phone=+113673310000&text=hello,more information!" target="_blank" class="btn btn-small btn-gray">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+
+                    <a href="https://m.me/ExampleName" target="_blank" class="btn btn-small btn-gray">
+                        <i class="ri-messenger-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+     </header>
+    <!-- =================== Main ==================== -->
+     <main>
+        <div class="filter container">
+            <!-- ============ filter-tabs ============= -->
+             <div class="filter-tabs">
+                <button class="filter-btn active" data-target="#projects">
+                    Projects
+                </button>
+                <button class="filter-btn" data-target="#skills">
+                    Skills
+                </button>
+             </div>
+             <!-- ================ Filter Sections ============ -->
+             <div class="filter-sections">
+                <!-- ============= projects section ======== -->
+                <div id="projects" class="projects grid active" data-content>
+                    <div class="projects-card">
+                        <img src="assets/images/web.jpg" alt="">
+                        <div class="projects-modal">
+                            <div>
+                                <span class="subtitle">Web</span>
+                                <h3 class="title">Payment Site</h3>
+                                <a href="" class="projects-btn btn btn-small">
+                                    <i class="ri-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-card">
+                        <img src="assets/images/django.png" alt="">
+                        <div class="projects-modal">
+                            <div>
+                                <span class="subtitle">Web</span>
+                                <h3 class="title">Django Developer</h3>
+                                <a href="" class="projects-btn btn btn-small">
+                                    <i class="ri-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-card">
+                        <img src="assets/images/python.jpg" alt="">
+                        <div class="projects-modal">
+                            <div>
+                                <span class="subtitle">Python</span>
+                                <h3 class="title">Python Developer</h3>
+                                <a href="" class="projects-btn btn btn-small">
+                                    <i class="ri-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-card">
+                        <img src="assets/images/web.jpg" alt="">
+                        <div class="projects-modal">
+                            <div>
+                                <span class="subtitle">Web</span>
+                                <h3 class="title">Payment Site</h3>
+                                <a href="" class="projects-btn btn btn-small">
+                                    <i class="ri-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============= skills section ========== -->
+                <div id="skills" class="projects grid" data-content>
+                    <div class="skills-group ">
+                        <h3 class="title">Backend Developer</h3>
+                        <div class="skills-box">
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Django</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Mysql</h3>
+                                    <span class="level">Advanced</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Python</h3>
+                                    <span class="level">Intermediate</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">JavaScript</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Git</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="skills-group ">
+                        <h3 class="title">Frontend Developer</h3>
+                        <div class="skills-box">
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Html</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Css</h3>
+                                    <span class="level">Advanced</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Bootstrap</h3>
+                                    <span class="level">Intermediate</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">JavaScript</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+    
+                            <div class="skill">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div class="text">
+                                    <h3 class="name">Git</h3>
+                                    <span class="level">Basic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+             </div>
+             <!-- ================ Skills Section ============= -->
+              
+        </div>
+     </main>
+    <!-- =================== Footer ================== -->
+     <footer>
+        <div class="container">
+            <span class="footer-copy">
+                &#169; Rebai Benatallah. All Rights Reserved
+            </span>
+        </div>
+     </footer>
+    <!-- =================== Js ====================== -->
+    <!-- =================== scroll reveal =========== -->
+     <!-- <script src="assets/scrollreveal.min.js"></script> -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- =================== Main Js ================= -->
+     <script src="assets/main.js"></script>
+</body>
+</html>
