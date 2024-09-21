@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <!-- remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <!-- main style -->
-     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
     <!-- =================== Header Profile ========== -->
@@ -250,6 +251,6 @@
      <!-- <script src="assets/scrollreveal.min.js"></script> -->
      <script src="https://unpkg.com/scrollreveal"></script>
     <!-- =================== Main Js ================= -->
-     <script src="assets/main.js"></script>
+     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 </html>
