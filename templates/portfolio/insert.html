@@ -1,0 +1,21 @@
+<a href="{%url 'insert'%}">insert</a>
+<a href="{%url 'page'%}">Page</a>
+<h1>Insert Page</h1>
+<form method="post" >
+    {% csrf_token %}
+    <!-- <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="job">Job:</label><br>
+    <input type="text" id="job" name="job"><br>
+    <label for="img">Image:</label><br>
+    <input type="file" id="img" name="img"><br>
+    <label for="years_work">Years Work:</label><br>
+    <input type="text" id="years_work" name="years_work"><br>
+    <label for="completed_projects">Completed Projects:</label><br>
+    <input type="text" id="completed_projects" name="completed_projects"><br>
+    <label for="satisfied_costomers">Satisfied Costomers:</label><br>
+    <input type="text" id="satisfied_costomers" name="satisfied_costomers"><br> -->
+    {{userform}}
+
+    <input type="submit" value="Insert">
+</form>

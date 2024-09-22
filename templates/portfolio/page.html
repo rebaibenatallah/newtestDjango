@@ -1,3 +1,5 @@
+<a href="{%url 'insert'%}">insert</a>
+<a href="{%url 'page'%}">Page</a>
 <h1> The First Page </h1>
 
 {% for x in user %}
@@ -6,4 +8,6 @@
 <h3> {{x.Years_work}}</h3>
 <h3> {{x.Completed_projects}}</h3>
 <h3> {{x.Satisfied_costomers}}</h3>
+<img src="{{x.image.url}}" alt="">
+
 {% endfor %}
