@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import User_portfolio
-from .forms import user_portfolioform
+from .forms import user_portfolioform,skills
 
 # Create your views here.
 def portfolio(request):
@@ -11,9 +11,15 @@ def page(request):
     x = {'user':user}
     return render(request,'portfolio/page.html',x)
 
+def skill(request):
+    data = skills(request.POST)
+    if data.is_valid():
+        data.save()
+    return render(request,'portfolio/insert.html',{'userform':skills})
+
 def insert(request):
     # ================= get data posted from insert html with forms.py
-    dataform = user_portfolioform(request.POST)
+    dataform = user_portfolioform(request.POST,request.FILES)
     # print(dataform)
     if dataform.is_valid():
         dataform.save()

@@ -1,5 +1,11 @@
 from django import forms
-from .models import User_portfolio
+from .models import User_portfolio , Skills
+
+class skills(forms.ModelForm):
+    class Meta:
+        model = Skills
+        fields = '__all__'
+
 class user_portfolioform(forms.ModelForm):
     # ==================== the first way =============
     # Name = forms.CharField(max_length=250)
