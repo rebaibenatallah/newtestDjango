@@ -1,7 +1,7 @@
 from django import forms
 from .models import User_portfolio , Skills
 
-class skills(forms.ModelForm):
+class skillsform(forms.ModelForm):
     class Meta:
         model = Skills
         fields = '__all__'

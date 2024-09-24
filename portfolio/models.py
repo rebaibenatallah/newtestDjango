@@ -19,6 +19,8 @@ class User_portfolio(models.Model):
 class Skills(models.Model):
     # ID = models.AutoField(unique=True)
     Name = models.CharField(max_length=255)
+    def __str__(self) -> str:
+        return self.Name
 
 class Project(models.Model):
     Name = models.CharField(max_length=255)
