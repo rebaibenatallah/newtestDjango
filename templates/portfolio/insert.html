@@ -1,8 +1,68 @@
-<a href="{%url 'insert'%}">insert</a>
+<!-- <a href="{%url 'insert'%}">insert</a>
 <a href="{%url 'page'%}">Page</a>
-<h1>Insert Page</h1>
-<form method="post" >
-    {% csrf_token %}
+<a href="{%url 'skills'%}">skills</a> -->
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/insert.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <Header>Registration Form</Header>
+        <form action="" method="POST"class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input_box">
+                <label for="">Full Name</label>
+                <!-- <input type="text" name="" placeholder="Enter full name" id=""> -->
+                {{userform.Name|attr:"placeholder:Enter full name"}}
+            </div>
+            <div class="input_box">
+                <label for="">Job</label>
+                <!-- <input type="text" name="" placeholder="Enter your job" id=""> -->
+                {{userform.Job|attr:"placeholder:Enter your job"}}
+            </div>
+            <div class="column">
+                <div class="input_box">
+                    <label for="">Image</label>
+                    <!-- <input type="file" name="" placeholder="Enter your job" id="img"> -->
+                    {{userform.image|attr:"placeholder:Enter your image"}}
+                </div>
+                <div class="input_box">
+                    <label for="">Years Work</label>
+                    <!-- <input type="number" name="" placeholder="Enter your job" id=""> -->
+                    {{userform.Years_work|attr:"placeholder:Years of Work"}}
+                </div>
+            </div>
+            <div class="column">
+                <div class="input_box">
+                    <label for="">Completed Projects</label>
+                    <!-- <input type="number" name="" placeholder="Enter your job" id=""> -->
+                    {{userform.Completed_projects|attr:"placeholder:Completed Projects"}}
+                </div>
+                <div class="input_box">
+                    <label for="">Satisfied Costomers</label>
+                    <!-- <input type="number" name="" placeholder="Enter your job" id=""> -->
+                    {{userform.Satisfied_costomers|attr:"placeholder:Satisfied costomers"}}
+                </div>
+            </div>
+            <button>Insert</button>
+        </form>
+    </section>
+    <!-- <form method="post" enctype="multipart/form-data" >
+        <h1>Insert Page</h1>
+        
+        {{userform.Job|add_class:"css_class"}}
+        <input type="submit" value="Insert">
+    </form> -->
+</body>
+</html>
+
+
     <!-- <label for="name">Name:</label><br>
     <input type="text" id="name" name="name"><br>
     <label for="job">Job:</label><br>
@@ -15,7 +75,3 @@
     <input type="text" id="completed_projects" name="completed_projects"><br>
     <label for="satisfied_costomers">Satisfied Costomers:</label><br>
     <input type="text" id="satisfied_costomers" name="satisfied_costomers"><br> -->
-    {{userform}}
-
-    <input type="submit" value="Insert">
-</form>
