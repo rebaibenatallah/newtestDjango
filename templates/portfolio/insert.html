@@ -1,6 +1,6 @@
-<h1><a href="{%url 'insert'%}">insert</a></h1>
-<h1><a href="{%url 'page'%}">Page</a></h1>
-<h1><a href="{%url 'skills'%}">skills</a> </h1>
+<!-- <h1><a href="{%url 'insert'%}">insert</a></h1> -->
+<!-- <h1><a href="{%url 'page'%}">Page</a></h1> -->
+<!-- <h1><a href="{%url 'skills'%}">skills</a> </h1> -->
 {% load static %}
 {% load widget_tweaks %}
 <!DOCTYPE html>
@@ -9,11 +9,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/insert.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>Document</title>
 </head>
 <body>
-    
-    {% if need == user %}
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="ri-menu-fill"></i>
+        </label>
+        <label for="" class="logo">DesignX</label>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a class="active" href="{%url 'insert'%}">User</a></li>
+            <li><a href="{%url 'skills'%}">Skills</a></li>
+            <li><a href="">Skill</a></li>
+            <li><a href="">Project</a></li>
+        </ul>
+    </nav>
+    <div class="body">
+    {% if need == 'user' %}
     <section class="container">
         <Header>Registration User</Header>
         <form action="" method="POST"class="form" enctype="multipart/form-data">
@@ -53,6 +68,11 @@
                 </div>
             </div>
             <button>Insert</button>
+            <div class="back">
+                <a href="">
+                    <i class="ri-arrow-left-s-line">Back to the first</i>
+                </a>
+            </div>
         </form>
     </section>
     {% else %}
@@ -65,9 +85,15 @@
                 {{userform.Name}}
             </div>
             <button>Insert</button>
+            <div class="back">
+                <a href="">
+                    <i class="ri-arrow-left-s-line">Back to the first</i>
+                </a>
+            </div>
         </form>
     </section>
     {% endif %}
+    </div>
 </body>
 </html>
 

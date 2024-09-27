@@ -9,6 +9,7 @@
 <h3> {{x.Years_work}}</h3>
 <h3> {{x.Completed_projects}}</h3>
 <h3> {{x.Satisfied_costomers}}</h3>
+{% if x.image.url != null %}
 <img src="{{x.image.url}}" alt="">
-
+{% endif %}
 {% endfor %}

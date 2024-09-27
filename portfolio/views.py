@@ -3,6 +3,8 @@ from .models import User_portfolio
 from .forms import user_portfolioform,skillsform
 
 # Create your views here.
+def home(request):
+    return render(request,'portfolio/card.html')
 def portfolio(request):
     return render(request,'portfolio/index.html')
 
@@ -48,3 +50,4 @@ def insert(request):
     # print(satisfied_costomers)
     return render(request,'portfolio/insert.html',{'userform':user_portfolioform,'need':'user'})
     # return render(request,'portfolio/insert.html')
+

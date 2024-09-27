@@ -26,7 +26,7 @@ nav{
 label.logo {
     color: white;
     font-size: 35px;
-    line-height: 70px;
+    line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
 }
@@ -62,97 +62,7 @@ a.active,a:hover{
 #check{
     display: none;
 }
-.container {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-.container header {
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: 500;
-    text-align: center;
-}
-.container .form{
-    margin-top: 30px;
-}
-.form .input_box {
-    width: 100%;
-    margin-top: 20px;
-}
-.input_box label {
-    color: #333;
-}
-.form .input_box input {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707070;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
-}
-.form .column{
-    display: flex;
-    column-gap: 15px;
-}
 
-.form #img {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    color: #707070;
-    font-size: 1rem;
-}
-
-.form button {
-    height: 55px;
-    width: 100%;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    margin-top: 30px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: 400;
-    transition: all 0.2s ease;
-    background-color: rgb(130, 106, 251);
-    /* background-color: rgb(35, 153, 59); */
-}
-.form button:hover{
-    background-color: rgb(88, 56, 250);
-}
-.back {
-    margin-top: 20px;    
-}
-.back a {
-    text-decoration: none;
-}
-.back i {
-    margin-top: 30px;
-    width: 100%;
-    color: #63708b;
-    padding: 0 15px;
-}
-
-/* responsive */
-@media screen and (max-width: 500px) {
-    .form .column{
-        flex-wrap: wrap;
-    }
-    
-}
 
 @media (max-width:952px) {
     label.logo{
@@ -195,4 +105,104 @@ a.active,a:hover{
         left: 0;
     }
    
+}
+
+/* code catds  */
+
+.container {
+    position: fixed;
+    width: 100%;
+    margin-top: -70px;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    background: #efefef;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: grey;
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+}
+.card{
+    /* width: 320px; */
+    border-radius: 25px;
+    background-color: #fff;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070f4;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+    /* margin-top: 70px; */
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265df2;
 }

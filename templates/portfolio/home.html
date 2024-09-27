@@ -1,0 +1,76 @@
+{% load static %}
+{%load widget_tweaks%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="ri-menu-fill"></i>
+        </label>
+        <label for="" class="logo">DesignX</label>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a class="active" href="{%url 'insert'%}">User</a></li>
+            <li><a href="{%url 'skills'%}">Skills</a></li>
+            <li><a href="">Skill</a></li>
+            <li><a href="">Project</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="/media/photos/24/09/21/ben.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Rebai Benatallah</h2>
+                            <p class="descripton">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam repellendus, sed mollitia aliquid id, porro fugit rem cumque officia reprehenderit in atque quidem laboriosam deleniti.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
